@@ -186,10 +186,10 @@ def _generate_repeat_percentages(dataset,metric):
     return repeat_perc, selection
 
 
-# In[12]:
+# In[15]:
 
 
-def generate_cohort_analysis(df, metric, record_type='all', period_agg='quarterly', fig=True, size=10, save_fig=True):
+def generate_cohort_analysis(df, metric, record_type='all', period_agg='quarterly', fig=True, size=10):
     """
     For metric use 'number_of_orders', 'number_of_items_bought'  or 'total_order_value'
     For record_type use 'all' or specific customer_type ['private','company','government']
@@ -263,13 +263,8 @@ def generate_cohort_analysis(df, metric, record_type='all', period_agg='quarterl
 
     plt.tight_layout()
 
-    # saves the figure
-    if save_fig:
-        fig = Heatmap.get_figure()
-        fig.savefig(metric+'RetentionMatrix'+record_type+'.png', bbox_inches='tight', dpi=600)
 
-
-# In[13]:
+# In[16]:
 
 
 
